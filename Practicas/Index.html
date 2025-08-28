@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Prácticas Diagnóstico</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+            background: #f5ebfd;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-self: center;
+
+        }
+
+        .mainContainer {
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            grid-template: auto / auto ;
+            max-height: fit-content;
+            gap: 2%;
+            padding: 20px;
+
+        }
+
+
+        h1 {
+            text-align: center;
+        }
+
+        .card {
+            background: #e7f9ff;
+            min-height: 200px;
+            min-width: 400px;
+            max-width: fit-content;
+            border-radius: 8px;
+            padding: 5%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 8px;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .resultado {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 6px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Prácticas de Diagnóstico</h1>
+
+    <div class="mainContainer">
+
+        <!-- Ejemplo: Conteo de caracteres -->
+        <div class="card">
+            <h2>P1 - Conteo de caracteres</h2>
+            <p>Escribe una cadena de texto para contar sus caracteres:</p>
+            <input type="text" id="cadenaInput" placeholder="Escribe algo...">
+            <button onclick="conteoCaracteres()">Ejecutar</button>
+            <p id="resultadoP1"></p>
+            <div id="resultadoP1" class="resultado"></div>
+        </div>
+
+        <!-- Ejemplo: Reversión de cadena -->
+        <div class="card">
+            <h2>P2 - Reversión de cadena</h2>
+            <p>Escribe una cadena de texto para invertir sus palabras:</p>
+            <input type="text" id="cadenaInputP2" placeholder="Escribe algo...">
+            <button onclick="reversionCadena()">Ejecutar</button>
+            <p id="resultadoP2"></p>
+        </div>
+
+        <!-- Ejemplo: Palíndromo -->
+        <div class="card">
+            <h2>P3 - Palíndromo</h2>
+            <p>Ingresa una palabra para verificar si es palíndromo:</p>
+            <input type="text" id="palabraInputP3" placeholder="Ej: rapar">
+            <button onclick="palindromo()">Ejecutar</button>
+            <p id="resultadoP3"></p>
+        </div>
+
+
+        <!-- Ejemplo: Ordenamiento de arreglos -->
+        <div class="card">
+            <h2>P4 - Ordenamiento de arreglos</h2>
+            <button onclick="ordenarArreglo()">Ejecutar</button>
+            <p id="resultadoP4"></p>
+        </div>
+
+
+        <!-- Ejemplo: Suma de elementos en un arreglo -->
+        <div class="card">
+            <h2>P5 - Suma de elementos en un arreglo</h2>
+            <button onclick="sumaElemArreglo()">Ejecutar</button>
+            <p id="resultadoP5"></p>
+        </div>
+
+
+        <!-- Ejemplo: Filtrado de elementos en un arreglo -->
+        <div class="card">
+            <h2>P6 - Filtrado de elementos en un arreglo</h2>
+            <input type="number" id="numeroInputP6" placeholder="Número a filtrar sus mayores...">
+            <button onclick="FiltradoElemArreglo()">Ejecutar</button>
+            <p id="resultadoP6"></p>
+        </div>
+
+
+        <!-- Ejemplo: Concatenación de arreglos -->
+        <div class="card">
+            <h2>P7 - Concatenación de arreglos</h2>
+            <button onclick="ConcatenacionArreglos()">Ejecutar</button>
+            <p id="resultadoP7"></p>
+        </div>
+
+        <!-- Ejemplo: Búsqueda de un elemento en un arreglo -->
+        <div class="card">
+            <h2>P8 - Búsqueda de un elemento en un arreglo</h2>
+            <input type="text" id="elementoInputP8" placeholder="Nombre a buscar...">
+            <button onclick="BusquedaElemArreglo()">Ejecutar</button>
+            <p id="resultadoP8"></p>
+        </div>
+    </div>
+
+    <script src="P1_ConteoCaracteres.js"></script>
+    <script src="P2_ReversionCadena.js"></script>
+    <script src="P3_Palindromo.js"></script>
+    <script src="P4_OrdenamientoArreglo.js"></script>
+    <script src="P5_SumaElemArreglo.js"></script>
+    <script src="P6_FiltradoElemArreglo.js"></script>
+    <script src="P7_ConcatenacionArreglos.js"></script>
+    <script src="P8_BusquedaElemArreglo.js"></script>
+</body>
+
+</html>
